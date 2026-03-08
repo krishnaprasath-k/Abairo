@@ -53,6 +53,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
+  padding-top: var(--nav-height);
 }
 
 h1,
@@ -364,11 +365,14 @@ img {
 /* Layout Elements */
 .header {
   height: var(--nav-height);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 50;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   display: flex;
   align-items: center;
