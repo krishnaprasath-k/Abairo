@@ -1,11 +1,81 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Hammer, TrendingUp, SearchCheck } from 'lucide-react';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="abairo | Websites, Content, Leads">
+  <!-- Hero Section -->
+  <section class="hero section-padding-lg">
+    <div class="hero-bg-accent"></div>
+    <div class="container animate-fade-up">
+      <h1 class="heading-xl mb-6">From Idea to Impact: Your Complete abairo Partner</h1>
+      <p class="body-lg hero-subtitle delay-100 animate-fade-up">
+        Websites that convert, content that engages, leads that close. We partner with premium fashion labels, fine jewellery houses, luxury home décor brands, wellness retreats, and other high-value ventures to create a refined online presence.
+      </p>
+      <div class="hero-cta animate-fade-up delay-200">
+        <a href="/contact" class="btn btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.25rem;">
+          Book Your Strategy Call — Let's map your growth
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="section-padding bg-light">
+    <div class="container flex-col items-center text-center max-w-3xl animate-fade-up">
+      <h2 class="heading-md mb-6">You don't need just a website, a few Instagram posts, or cold calls.</h2>
+      <p class="body-lg mb-6 text-muted">
+        <strong>You need a growth system</strong>—a structure that makes your business visible, credible, and profitable.
+      </p>
+      <p class="body-md">
+        That's where we come in. We combine web development, smart content strategies, and targeted lead generation into a single, done-for-you service designed to bring you clients, not just clicks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Highlights (3 Pillars) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-8 animate-fade-up">
+        <span class="text-overline">Key Highlights</span>
+        <h2 class="heading-lg">3 Pillars of Our Work</h2>
+      </div>
+      
+      <div class="grid grid-cols-3 gap-6">
+        <!-- Pillar 1 -->
+        <div class="card flex-col items-center text-center animate-fade-up delay-100 hover-lift">
+          <div class="w-16 h-16 rounded-xl bg-surface flex items-center justify-center mb-6" style="background: rgba(255,92,0,0.05); color: var(--color-primary); border: 1px solid rgba(255,92,0,0.1);">
+            <Hammer size={28} strokeWidth={1.5} />
+          </div>
+          <h3 class="heading-sm mb-4">Build</h3>
+          <p class="body-sm">A stunning, functional website that sells your story and your services.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="card flex-col items-center text-center animate-fade-up delay-200 hover-lift">
+          <div class="w-16 h-16 rounded-xl bg-surface flex items-center justify-center mb-6" style="background: rgba(255,92,0,0.05); color: var(--color-primary); border: 1px solid rgba(255,92,0,0.1);">
+            <SearchCheck size={28} strokeWidth={1.5} />
+          </div>
+          <h3 class="heading-sm mb-4">Grow</h3>
+          <p class="body-sm">SEO and content strategies that make your brand discoverable and desirable.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="card flex-col items-center text-center animate-fade-up delay-300 hover-lift">
+          <div class="w-16 h-16 rounded-xl bg-surface flex items-center justify-center mb-6" style="background: rgba(255,92,0,0.05); color: var(--color-primary); border: 1px solid rgba(255,92,0,0.1);">
+            <TrendingUp size={28} strokeWidth={1.5} />
+          </div>
+          <h3 class="heading-sm mb-4">Convert</h3>
+          <p class="body-sm">Lead generation campaigns that get the right people talking to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section-padding bg-dark text-center">
+    <div class="container animate-fade-up">
+      <h2 class="heading-lg mb-6">Ready to scale revenue with precision?</h2>
+      <a href="/contact" class="btn btn-primary">Let's Get Started</a>
+    </div>
+  </section>
 </Layout>

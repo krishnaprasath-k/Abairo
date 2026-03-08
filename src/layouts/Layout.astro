@@ -1,23 +1,92 @@
+---
+import '../styles/global.css';
+
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+interface Props {
+  title: string;
+  paths?: { label: string; href?: string }[];
+}
+
+const { title, paths } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="From Idea to Impact: Your Complete abairo" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">abairo</a>
+        <nav class="nav-links">
+          <a href="/about" class="nav-link">About</a>
+          <a href="/services" class="nav-link">Services</a>
+          <a href="/case-studies" class="nav-link">Results</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    {paths && paths.length > 0 && (
+      <div class="border-b border-gray-100 bg-white sticky" style="top: var(--nav-height); z-index: 40;">
+        <div class="container py-3">
+          <Breadcrumbs paths={paths} />
+        </div>
+      </div>
+    )}
+    <main>
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col" style="grid-column: span 2;">
+            <a href="/" class="footer-logo logo">abairo</a>
+            <p class="body-md mt-4" style="max-width: 400px; color: #9CA3AF;">We combine web development, smart content strategies, and targeted lead generation into a single, done-for-you service designed to bring you clients, not just clicks.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <div class="footer-links">
+              <a href="/services/digital-growth-system">Digital Growth System</a>
+              <a href="/services/growth-boosters">Growth Boosters</a>
+              <a href="/services/strategic-advisory">Strategic Advisory</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <div class="footer-links">
+              <a href="/about">About Us</a>
+              <a href="/case-studies">Case Studies</a>
+              <a href="/contact">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} abairo. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      const hiddenElements = document.querySelectorAll('.animate-fade-up');
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us | abairo" paths={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}>
+  <section class="section-padding-lg bg-light text-center">
+    <div class="container animate-fade-up">
+      <h1 class="heading-xl mb-4">Let's talk about growth Engine</h1>
+      <p class="body-lg max-w-3xl mx-auto">
+        We work with businesses that are ready to take consistent action toward predictable revenue. If that sounds like you, let's talk.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container max-w-3xl animate-fade-up delay-100">
+      <div class="card border">
+        
+        <form class="flex-col gap-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group mb-0">
+              <label class="form-label" for="name">Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group mb-0">
+              <label class="form-label" for="business">Business Name</label>
+              <input type="text" id="business" name="business" class="form-control" placeholder="Company Inc." required>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group mb-0">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group mb-0">
+              <label class="form-label" for="website">Website (if any)</label>
+              <input type="url" id="website" name="website" class="form-control" placeholder="https://example.com">
+            </div>
+          </div>
+          
+          <div class="form-group mb-0 mt-4">
+            <label class="form-label" for="service">Services Needed</label>
+            <select id="service" name="service" class="form-control" required style="appearance: none; background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1em;">
+              <option value="" disabled selected>Select a service</option>
+              <option value="digital-growth-system">abairo System</option>
+              <option value="growth-boosters">Growth Boosters</option>
+              <option value="strategic-advisory">Strategic Advisory</option>
+              <option value="not-sure">I'm not sure yet</option>
+            </select>
+          </div>
+          
+          <div class="form-group mb-0 mt-4">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your current challenges and goals..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-full mt-6" style="padding: 1.25rem;">Book My Strategy Call</button>
+        </form>
+        
+      </div>
+    </div>
+  </section>
+
+</Layout>

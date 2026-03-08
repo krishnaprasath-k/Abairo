@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Check } from 'lucide-react';
+---
+
+<Layout title="About Us | abairo" paths={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}>
+  <section class="section-padding-lg bg-light text-center">
+    <div class="container animate-fade-up">
+      <h1 class="heading-xl mb-6">Your Business Deserves More Than Random Tactics</h1>
+      <p class="body-lg max-w-3xl mx-auto">
+        In a world full of scattered marketing advice, we believe growth comes from alignment. We work with business owners who want clarity, consistency, and measurable results.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container grid grid-cols-2 gap-8 items-center">
+      <div class="card-dark hover-lift animate-fade-up">
+        <h2 class="heading-md mb-4 text-white">Without juggling multiple vendors or chasing vanity metrics.</h2>
+        <p class="body-md mb-6">
+          With a mix of strategic thinking and hands-on execution, we help you:
+        </p>
+        <ul class="flex-col gap-2">
+          <li class="flex items-center gap-2 text-white">
+            <span class="w-6 h-6 rounded-full flex justify-center items-center text-primary bg-primary/10">
+              <Check size={14} strokeWidth={3} />
+            </span>
+            Build a professional online presence that reflects your brand’s value.
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <span class="w-6 h-6 rounded-full flex justify-center items-center text-primary bg-primary/10">
+              <Check size={14} strokeWidth={3} />
+            </span>
+            Generate a predictable flow of high-quality leads.
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <span class="w-6 h-6 rounded-full flex justify-center items-center text-primary bg-primary/10">
+              <Check size={14} strokeWidth={3} />
+            </span>
+            Turn those leads into paying clients, faster.
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-col gap-6">
+        <span class="text-overline animate-fade-up">Why Work With Us</span>
+        
+        <div class="card bg-surface hover-lift animate-fade-up delay-100">
+          <h3 class="heading-sm mb-2 text-primary">Holistic Approach</h3>
+          <p class="body-sm">We integrate web, content, and lead gen instead of leaving them in silos.</p>
+        </div>
+        
+        <div class="card bg-surface hover-lift animate-fade-up delay-200">
+          <h3 class="heading-sm mb-2 text-primary">Niche Expertise</h3>
+          <p class="body-sm">From health retreats to high-net-worth client services, we understand how different industries sell.</p>
+        </div>
+        
+        <div class="card bg-surface hover-lift animate-fade-up delay-300">
+          <h3 class="heading-sm mb-2 text-primary">Custom Strategies</h3>
+          <p class="body-sm">No copy-paste campaigns; every client gets a growth plan built around their goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section-padding bg-dark text-center">
+    <div class="container animate-fade-up">
+      <h2 class="heading-lg mb-6">Ready to work with real experts?</h2>
+      <a href="/contact" class="btn btn-primary">Book Your Strategy Call</a>
+    </div>
+  </section>
+</Layout>

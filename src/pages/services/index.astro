@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Code, Search, PenTool } from 'lucide-react';
+---
+
+<Layout title="Our Services | abairo" paths={[{ label: 'Home', href: '/' }, { label: 'Services' }]}>
+  <section class="section-padding-lg bg-light text-center">
+    <div class="container animate-fade-up">
+      <h1 class="heading-xl mb-6">Our Growth Framework</h1>
+      <p class="body-lg max-w-3xl mx-auto">
+        We’ve packaged our work into a streamlined system that starts with the essentials and grows with your business.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container flex-col gap-8">
+      
+      <!-- Flagship Service -->
+      <div class="card card-dark hover-lift animate-fade-up delay-100">
+        <div class="flex justify-between items-center mb-6 flex-wrap gap-4">
+          <div>
+            <span class="badge mb-2">Flagship</span>
+            <h2 class="heading-md">abairo System</h2>
+          </div>
+          <p class="heading-sm text-primary">Starts at ₹60,000</p>
+        </div>
+        <p class="body-md mb-6">A 90-day sprint to take your business from invisible to irresistible.</p>
+        
+        <div class="grid grid-cols-3 gap-6 mb-8">
+          <div class="p-6 rounded-md border border-gray-800 flex-col items-start gap-4 hover-lift">
+            <div class="text-primary bg-primary/10 p-2 rounded-md">
+              <Code size={24} />
+            </div>
+            <div>
+              <h3 class="body-md font-bold text-white mb-2">Website Development</h3>
+              <p class="body-sm text-gray-400">(WordPress / Shopify) — Designed to convert, mobile-optimized, SEO-friendly.</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-md border border-gray-800 flex-col items-start gap-4 hover-lift">
+            <div class="text-primary bg-primary/10 p-2 rounded-md">
+              <Search size={24} />
+            </div>
+            <div>
+              <h3 class="body-md font-bold text-white mb-2">Basic SEO Setup</h3>
+              <p class="body-sm text-gray-400">Keyword targeting, on-page optimization, Google indexing.</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-md border border-gray-800 flex-col items-start gap-4 hover-lift">
+            <div class="text-primary bg-primary/10 p-2 rounded-md">
+              <PenTool size={24} />
+            </div>
+            <div>
+              <h3 class="body-md font-bold text-white mb-2">Content Roadmap</h3>
+              <p class="body-sm text-gray-400">A 3-month social media posting plan with brand positioning angles.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex justify-between items-center flex-wrap gap-4 pt-6 border-t border-gray-800">
+          <p class="body-md"><strong class="text-white">Ideal for:</strong> New or rebranding businesses that need a strong foundation.</p>
+          <a href="/services/digital-growth-system" class="btn btn-outline-light">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Growth Boosters (Add-Ons) -->
+      <div class="card bg-surface hover-lift border animate-fade-up delay-200">
+        <div class="mb-6">
+          <span class="badge mb-2 bg-gray-100 text-gray-800">Add-Ons</span>
+          <h2 class="heading-md">Growth Boosters</h2>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-6 mb-8">
+          <div>
+            <h3 class="heading-sm mb-4 text-primary">Targeted Lead Gen</h3>
+            <ul class="flex-col gap-2">
+              <li class="body-sm">- LinkedIn prospecting, cold email</li>
+              <li class="body-sm">- HNI lead acquisition</li>
+              <li class="body-sm">- Industry-specific campaigns</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="heading-sm mb-4 text-primary">Content Strategy</h3>
+            <ul class="flex-col gap-2">
+              <li class="body-sm">- Instagram growth strategy</li>
+              <li class="body-sm">- YouTube content mapping</li>
+              <li class="body-sm">- LinkedIn authority building</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="heading-sm mb-4 text-primary">Paid Ads Management</h3>
+            <ul class="flex-col gap-2">
+              <li class="body-sm">- Facebook, Instagram, LinkedIn</li>
+              <li class="body-sm">- Designed for ROI, not just reach</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="flex justify-between items-center flex-wrap gap-4 pt-6 border-t border-gray-100">
+          <a href="/services/growth-boosters" class="btn btn-outline">Explore Boosters →</a>
+        </div>
+      </div>
+
+      <!-- Strategic Advisory -->
+      <div class="card bg-surface hover-lift border animate-fade-up delay-300">
+        <div class="mb-6">
+          <span class="badge mb-2 bg-gray-100 text-gray-800">By Selection</span>
+          <h2 class="heading-md">Strategic Advisory</h2>
+        </div>
+        <p class="body-md mb-6">For businesses ready to scale or pivot.</p>
+        
+        <ul class="grid grid-cols-3 gap-6 mb-8">
+          <li class="bg-light p-6 rounded-sm text-center font-semibold">- Business model refinement.</li>
+          <li class="bg-light p-6 rounded-sm text-center font-semibold">- Sales and packaging strategies.</li>
+          <li class="bg-light p-6 rounded-sm text-center font-semibold">- Revenue-share partnerships.</li>
+        </ul>
+        
+        <div class="flex justify-between items-center flex-wrap gap-4 pt-6 border-t border-gray-100">
+          <a href="/services/strategic-advisory" class="btn btn-outline">Learn More →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

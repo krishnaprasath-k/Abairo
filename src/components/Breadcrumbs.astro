@@ -1,0 +1,39 @@
+---
+import { ChevronRight } from 'lucide-react';
+
+interface Path {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  paths: Path[];
+}
+
+const { paths } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb">
+  <ol class="flex items-center flex-wrap gap-2 text-sm text-gray-500">
+    {paths.map((path, index) => {
+      const isLast = index === paths.length - 1;
+      
+      return (
+        <li class="flex items-center gap-2">
+          {isLast ? (
+            <span class="font-medium text-gray-900" aria-current="page">
+              {path.label}
+            </span>
+          ) : (
+            <>
+              <a href={path.href || '#'} class="hover:text-primary transition-colors duration-200">
+                {path.label}
+              </a>
+              <ChevronRight size={14} class="text-gray-400" />
+            </>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</nav>

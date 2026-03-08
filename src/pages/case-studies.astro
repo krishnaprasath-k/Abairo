@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { LayoutTemplate, Banknote, Briefcase } from 'lucide-react';
+---
+
+<Layout title="Case Studies | abairo" paths={[{ label: 'Home', href: '/' }, { label: 'Case Studies' }]}>
+  <section class="section-padding-lg bg-light text-center">
+    <div class="container animate-fade-up">
+      <h1 class="heading-xl mb-6">Proof That Our System Works</h1>
+      <p class="body-lg max-w-3xl mx-auto">
+        We partner with businesses to transform their digital presence and lead generation engines. Here are some of the results we've achieved together.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="grid grid-cols-3 gap-8">
+        
+        <!-- Case Study 1 -->
+        <div class="card card-dark flex-col gap-6 text-center hover-lift animate-fade-up delay-100">
+          <div class="w-16 h-16 rounded-xl bg-surface mx-auto flex items-center justify-center text-primary" style="background: rgba(255,92,0,0.05); border: 1px solid rgba(255,92,0,0.1);">
+            <LayoutTemplate size={28} strokeWidth={1.5} />
+          </div>
+          <div>
+            <span class="text-overline">Lifestyle Brand</span>
+            <h3 class="heading-sm mb-2 text-white">Full Digital Rebuild</h3>
+          </div>
+          <p class="body-sm text-left border-l-2 border-primary pl-4 py-2">
+            Built the brand’s web presence, aligned the content plan, and optimized the engagement flow to capture and convert more visitors.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-800">
+            <span class="block text-primary font-bold text-3xl mb-2">40%</span>
+            <span class="body-sm uppercase tracking-wide">Increase in inbound inquiries<br/>in 3 months</span>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="card card-dark flex-col gap-6 text-center hover-lift animate-fade-up delay-200">
+          <div class="w-16 h-16 rounded-xl bg-surface mx-auto flex items-center justify-center text-primary" style="background: rgba(255,92,0,0.05); border: 1px solid rgba(255,92,0,0.1);">
+            <Banknote size={28} strokeWidth={1.5} />
+          </div>
+          <div>
+            <span class="text-overline">Finance - Loan Solutions</span>
+            <h3 class="heading-sm mb-2 text-white">High-Net-Worth Lead Gen</h3>
+          </div>
+          <p class="body-sm text-left border-l-2 border-primary pl-4 py-2">
+            HNI lead generation strategies specifically built to attract and convert applicants for high-value loan products.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-800">
+            <span class="block text-primary font-bold text-3xl mb-2">35</span>
+            <span class="body-sm uppercase tracking-wide">Qualified leads<br/>in the first campaign cycle</span>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="card card-dark flex-col gap-6 text-center hover-lift animate-fade-up delay-300">
+          <div class="w-16 h-16 rounded-xl bg-surface mx-auto flex items-center justify-center text-primary" style="background: rgba(255,92,0,0.05); border: 1px solid rgba(255,92,0,0.1);">
+            <Briefcase size={28} strokeWidth={1.5} />
+          </div>
+          <div>
+            <span class="text-overline">Web Dev Service Client</span>
+            <h3 class="heading-sm mb-2 text-white">Revenue Share Model</h3>
+          </div>
+          <p class="body-sm text-left border-l-2 border-primary pl-4 py-2">
+            Implemented a strategic advisory and execution partnership to drive completely aligned incentives and rapid project closing.
+          </p>
+          <div class="mt-auto pt-6 border-t border-gray-800">
+            <span class="block text-primary font-bold text-3xl mb-2">3</span>
+            <span class="body-sm uppercase tracking-wide">5-figure projects closed<br/>in the first month</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <section class="section-padding bg-dark text-center">
+    <div class="container animate-fade-up">
+      <h2 class="heading-lg mb-6 text-white">Want to join this list?</h2>
+      <a href="/contact" class="btn btn-primary">Book Your Strategy Call</a>
+    </div>
+  </section>
+</Layout>

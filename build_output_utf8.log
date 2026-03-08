@@ -1,0 +1,63 @@
+﻿
+> build
+> astro build
+
+[2m06:01:23[22m [34m[content][39m Syncing content
+[2m06:01:23[22m [34m[content][39m Synced content
+[2m06:01:23[22m [34m[types][39m Generated [2m37ms[22m
+[2m06:01:23[22m [34m[build][39m output: [34m"static"[39m
+[2m06:01:23[22m [34m[build][39m mode: [34m"static"[39m
+[2m06:01:23[22m [34m[build][39m directory: [34mC:\Users\KrishnaPrasath\Desktop\College\portfolio\dist\[39m
+[2m06:01:23[22m [34m[build][39m Collecting build info...
+[2m06:01:23[22m [34m[build][39m [32mΓ£ô Completed in 62ms.[39m
+[2m06:01:23[22m [34m[build][39m Building static entrypoints...
+node.exe : [31m[1m06
+:01:25[22m [ERROR] 
+[vite][39m 
+[31mΓ£ù[39m Build 
+failed in 2.01s
+At line:1 char:1
++ & "C:\Program Files\
+nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ([31m[1m0   
+ 6:01:...failed in    
+ 2.01s:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+Could not resolve "../
+layouts/Layout.astro" 
+from "src/pages/servic
+es/index.astro"
+file: C:/Users/Krishna
+Prasath/Desktop/Colleg
+e/portfolio/src/pages/
+services/index.astro
+  [1mStack 
+trace:[22m
+[2m    at 
+getRollupError (file:/
+//C:/Users/KrishnaPras
+ath/Desktop/College/po
+rtfolio/node_modules/r
+ollup/dist/es/shared/p
+arseAst.js:402:41)
+    at ModuleLoader.ha
+ndleInvalidResolvedId 
+(file:///C:/Users/Kris
+hnaPrasath/Desktop/Col
+lege/portfolio/node_mo
+dules/rollup/dist/es/s
+hared/node-entry.js:21
+710:24)[22m
