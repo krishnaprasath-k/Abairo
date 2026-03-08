@@ -2,6 +2,7 @@
 import '../styles/global.css';
 
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { Menu, X } from 'lucide-react';
 
 interface Props {
   title: string;
@@ -25,12 +26,17 @@ const { title, paths } = Astro.props;
     <header class="header">
       <div class="container">
         <a href="/" class="logo">abairo</a>
-        <nav class="nav-links">
+        <nav id="nav-menu" class="nav-links">
           <a href="/about" class="nav-link">About</a>
           <a href="/services" class="nav-link">Services</a>
           <a href="/case-studies" class="nav-link">Results</a>
           <a href="/contact" class="nav-link">Contact</a>
         </nav>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="icon-menu"><Menu size={24} /></span>
+          <span class="icon-close"><X size={24} /></span>
+        </button>
+      </div>
     </header>
     {paths && paths.length > 0 && (
       <div class="border-b border-gray-100 bg-white sticky" style="top: var(--nav-height); z-index: 40;">
@@ -87,6 +93,18 @@ const { title, paths } = Astro.props;
       
       const hiddenElements = document.querySelectorAll('.animate-fade-up');
       hiddenElements.forEach((el) => observer.observe(el));
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (mobileBtn && navMenu) {
+        mobileBtn.addEventListener('click', () => {
+          navMenu.classList.toggle('is-open');
+          mobileBtn.classList.toggle('is-open');
+          document.body.classList.toggle('menu-open');
+        });
+      }
     </script>
   </body>
 </html>
